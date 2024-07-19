@@ -50,4 +50,4 @@ This project was designed by
 **Melvine Jerry Ambwere**
 
 the project is live at
-# project1
+("https://project1-steel-eta.vercel.app/")

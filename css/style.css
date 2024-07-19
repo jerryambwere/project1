@@ -12,15 +12,14 @@ body {
   padding: 20px;
 }
 
-/* Main heading style */
+
 h2 {
   font-size: 2em;
   margin-bottom: 20px;
   text-align: center;
-  color: #007bff; /* Blue color for emphasis */
+  color: #007bff; 
 }
 
-/* Navigation styling */
 nav {
   text-align: center;
   margin-bottom: 20px;
@@ -40,14 +39,14 @@ nav a:hover {
   color: white;
 }
 
-/* Content area styling */
+
 #home {
   background-color: #fff;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  
 }
-/* Container styling */
+
 #gamelist {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -56,7 +55,7 @@ nav a:hover {
   padding: 0;
 }
 
-/* Game item styling */
+
 #gamelist li {
   background-color: #f7f7f7;
   border-radius: 8px;
