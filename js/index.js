@@ -1,0 +1,31 @@
+const inputForm = document.getElementById("productName");
+const template = document.getElementsByTagName("template");
+const url = "https://www.cheapshark.com/api/1.0/deals?upperPrice=15";
+const gameList = document.getElementById("gamelist");
+const cartGames = document.getElementById("cart games");
+const cartBtn = document.getElementById("cart");
+const searchFrm = document.getElementById("text");
+
+fetch(url)
+  .then((res) => res.json())
+  .then((data) => {
+    data.forEach((data) => {
+      const li = document.createElement("li");
+      li.innerHTML = `
+        <img class='thumb'src="${data.thumb}"alt="game poster">
+        <h2 class="title">${data.title}</h2>
+ <p class="dealRating">${data.dealRating}</p>
+<p class="releaseDate">${data.releaseDate}</p>
+<p class="internalName">${data.internalName}</p>
+<p class="salePrice">${data.salePrice}</p>
+       <button class="purchase">purchase</button>
+`;
+      gameList.appendChild(li);
+      const buyBtn = li.querySelector(".purchase");
+      const cartBtn = li.querySelector(".cart");
+
+      buyBtn.addEventListener("click", function (data) {
+        alert("confirm purchase!");
+      });
+    });
+  });
