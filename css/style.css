@@ -1,7 +1,50 @@
+#box {
+  color: green; 
+  animation: bounce 2s infinite;
+}
+
+#Xbox {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }}
+ #ps {
+    color: blue; 
+    animation: bounce 2s infinite;
+  }
+  
+  
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-30px);
+    }
+    60% {
+      transform: translateY(-15px);
+    }}
+
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+#about{
+padding: 50px;
 }
 
 body {
@@ -59,7 +102,7 @@ nav a:hover {
 #gamelist li {
   background-color: #f7f7f7;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: black;
   overflow: hidden;
   transition: transform 0.3s ease-in-out;
 }
@@ -96,17 +139,39 @@ nav a:hover {
 }
 
 .purchase {
-  background-color: #4caf50;
-  color: white;
+  background-color:blue;
+  color: black;
   border: none;
-  padding: 8px 16px;
-  font-size: 14px;
+  padding: 10px 20px;
   cursor: pointer;
-  border-radius: 5px;
-  margin-top: 10px;
+  transition: background-color 0.3s ease; 
+  border-radius: 15px;
+}
+#delete{
+  background-color:blue;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
   transition: background-color 0.3s ease;
+  border-radius: 15px;
+}
+
+#delete:hover{
+  background-color: red;
+  animation: bounce 0.5s infinite alternate
 }
 
 .purchase:hover {
-  background-color: #5abe5f;
+  background-color: greenyellow;
+  animation: bounce 0.5s infinite alternate
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
 }

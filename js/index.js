@@ -19,13 +19,24 @@ fetch(url)
 <p class="internalName">${data.internalName}</p>
 <p class="salePrice">${data.salePrice}</p>
        <button class="purchase">purchase</button>
+       <button id="delete">delete</button>
 `;
       gameList.appendChild(li);
       const buyBtn = li.querySelector(".purchase");
-      const cartBtn = li.querySelector(".cart");
-
-      buyBtn.addEventListener("click", function (data) {
-        alert("confirm purchase!");
-      });
-    });
-  });
+    
+        buyBtn.addEventListener("click", function () {
+          buyBtn.textContent = "purchased";
+  
+          alert("Confirm purchase!");
+          const deleteBtn = li.querySelector(".delete");
+          deleteBtn.addEventListener("click", function () {
+          
+            li.removeChild();
+      
+            alert("Game deleted!");
+          });
+        });
+      })
+        });
+    
+  
