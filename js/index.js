@@ -13,11 +13,11 @@ fetch(url)
       const li = document.createElement("li");
       li.innerHTML = `
         <img class='thumb'src="${data.thumb}"alt="game poster">
-        <h2 class="title">${data.title}</h2>
- <p class="dealRating">${data.dealRating}</p>
-<p class="releaseDate">${data.releaseDate}</p>
-<p class="internalName">${data.internalName}</p>
-<p class="salePrice">${data.salePrice}</p>
+        <h2 class="title">Title:${data.title}</h2>
+ <p class="dealRating">Rating:${data.dealRating}</p>
+<p class="releaseDate">Release Date:${data.releaseDate}</p>
+<p class="internalName">Code Name:${data.internalName}</p>
+<p class="salePrice">Game price:${data.salePrice}</p>
        <button class="purchase">purchase</button>
        <button id="delete">delete</button>
 `;
